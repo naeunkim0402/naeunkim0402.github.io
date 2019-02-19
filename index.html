@@ -1,1 +1,51 @@
 <h1>디자인 학습</h1>
+<script>
+    var targetNumber = 1;
+    window.onload = function () {
+        min = 1;
+        max = 40;
+        result = '';
+        for (i = min; i <= max; i++) {
+            result += `
+                <button value=` + i + ` onclick=show(event)>
+                idea ` + i + `
+                </button>
+            `
+        }
+        document.getElementById('list').innerHTML = result;
+        document.getElementById("target").innerHTML = `
+        <object type="text/html" data="./goodui/idea` + min + `.html"></object>`
+        ;
+    }
+
+    function show(event) {
+        targetNumber = event.target.value;
+        document.getElementById("target").innerHTML = `
+        <object type="text/html" data="./goodui/idea` + targetNumber + `.html">
+        </object>`
+        ;
+    }
+
+
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #target {
+        width: calc(100vw);
+        height: calc(100vh - 100px);
+        margin: .5rem 0rem;
+        outline: 1px solid black;
+    }
+
+    button {
+        margin: .125rem .125rem;
+        padding: .25rem .5rem;
+    }
+</style>
+<ul id="list"></ul>
+
+<div id="target"></div>
