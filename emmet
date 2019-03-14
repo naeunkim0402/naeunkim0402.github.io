@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- >는 하위태그, 자식태그 -->
+    div.a>div.b 
+
+    <div class="a">
+        <div class="b"></div>
+    </div>
+
+    <!-- +는 형제태그, 동등한 위치 -->
+    div.a+div.b+div.c
+
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+
+    <!-- *는 같은 태그 여러개 한번에 만들기 -->
+    img*5
+
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+
+    <!-- 여러개 섞어쓸때 -->
+    div.a+(div.b>dib.c>div.d)+div.e
+
+    <div class="a"></div>
+    <div class="b">
+        <dib class="c">
+            <div class="d"></div>
+        </dib>
+    </div>
+    <div class="e"></div>
+
+
+    div.a+div.v>div.c>(div.d+div.e)
+
+    <div class="a"></div>
+    <div class="b">
+        <div class="c">
+            <div class="d"></div>
+            <div class="e"></div>
+        </div>
+    </div>
+
+    <!-- 상위태그에 넣을때 -->
+    nav>ul>li^a
+
+    <nav>
+        <ul>
+            <li></li>
+        </ul>
+        <a href=""></a>
+    </nav>
+
+    <!-- 중첩도 가능 -->
+    nav>ul>li^^a
+
+    <nav>
+        <ul>
+            <li></li>
+        </ul>
+    </nav>
+    <a href=""></a>
+
+    <!-- *는 같은 태그 여러개 -->
+    ul>(li>a)*5
+
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+
+    <!-- #은 id이름 부여, .는 클래스 이름부여 -->
+    nav#navigation>ul>li
+
+    <nav id="navigation">
+        <ul>
+            <li></li>
+        </ul>
+    </nav>
+
+    <!-- []는 속성을 더 자세히 나타낼때 -->
+    a[target="_blank" title="anchor"]*5
+
+    <a href="" target="_blank" title="anchor"></a>
+    <a href="" target="_blank" title="anchor"></a>
+    <a href="" target="_blank" title="anchor"></a>
+    <a href="" target="_blank" title="anchor"></a>
+    <a href="" target="_blank" title="anchor"></a>
+
+    <!-- {}는 내용에 텍스트 넣을때 -->
+    ul>li>{table}
+
+    <ul>
+        <li>table</li>
+    </ul>
+
+
+    ul>li.item$*2
+
+    <ul>
+        <li class="item1"></li>
+        <li class="item2"></li>
+    </ul>
+
+
+
+
+
+
+
+
+</body>
+</html>
