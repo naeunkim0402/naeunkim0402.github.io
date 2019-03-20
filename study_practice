@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>study 복습</title>
+</head>
+<Style>
+    *{border: 1px solid black;
+        margin:0;padding:0;}
+    .contents-box {text-align:center;width:350px; height:600px; }
+    .contetns-box>div{}
+    .contents-box .contents>input {display:block; width:100%;margin:10px;
+    margin-right:0px;}
+
+
+
+
+</Style>    
+
+<body>
+    <div class="contents-box">
+        <div class="title"> The title </div>
+        <div class="contents">
+            <input>
+            <input>
+            <input>
+            <input>
+        </div>
+        <div class="action-button">
+            <button>You call to action</button>
+        </div>
+
+    </div>    
+    <div class="click-button">
+        <div class="preview"></div>
+        <div class="next"></div>
+    </div>    
+</body>
+</html>
